@@ -1,27 +1,25 @@
-import { Image } from '@chakra-ui/image'
-import { Box } from '@chakra-ui/layout'
+
 import React from 'react'
 import Container from '../components/Container'
+import IG from '../components/IG'
 
 import ItemLayout from '../components/ItemLayout'
-import Slide from '../components/Slide'
+import ImageSlider from '../components/ImageSlider'
+import { Box, Flex, Text } from '@chakra-ui/layout'
+import SideBar from '../components/SideBar'
 
 function Home() {
+  
     return (
-      <Container>
-        <Box
-          bgColor="red"
-          borderColor="purple"
-          h={['400px','500px']}
-          w={'90%'}
-          marginX="auto"
-          marginY={0}
-        >
-          <Slide />
-        </Box>
-
-        <ItemLayout />
-      </Container>
+      
+        <Container >
+            <ImageSlider />
+            <Flex justifyContent="center"
+              p={2}>
+              <ItemLayout />
+            </Flex>
+            <IG />
+        </Container>
     );
 }
 

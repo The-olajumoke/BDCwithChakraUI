@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaShoppingCart, FaStar } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
 import { Button } from '@chakra-ui/button';
 import { useHistory } from 'react-router-dom';
-import {addItemToCart} from "../redux/Cart/cartSlice"
+import { addItemToCart } from '../redux/Cart/cartSlice';
 import { Img } from '@chakra-ui/image';
-import { Box, Flex, HStack, Text, VStack } from '@chakra-ui/layout';
-import {useDispatch} from "react-redux"
+import { Box, Flex, HStack, Text } from '@chakra-ui/layout';
+import { useDispatch } from 'react-redux';
 function Item({ product, id }) {
+  // const currentProduct = product.toString("");
+  // console.log(currentProduct);
+
+  // const currentProduct=[product, id]
+  // console.log(currentProduct);
   const history = useHistory();
-const dispatch= useDispatch()
+  const dispatch = useDispatch();
+  const [likeState, setLikeState] = useState(false);
 
   return (
     <Flex
@@ -65,7 +71,7 @@ const dispatch= useDispatch()
         textAlign={['center', 'left']}
         alignItems="center"
       >
-        <Box h="20%" w="100%" py={1}>
+        <Box h="20%" w="100%" py={1} flex={0.5}>
           <Text fontSize={['17px', '20px']} fontWeight="extrabold">
             {product.name}
           </Text>
@@ -92,27 +98,29 @@ const dispatch= useDispatch()
           </Box>
           <Button
             display={['none', 'inline-flex']}
-            bgColor="grey.100"
+            // bgColor="grey.100"
+            backgroundColor="white"
             variant="solid"
             size={['sm', 'lg']}
             p={2}
           >
             <FiHeart
               className="footer__icon"
+              fill={likeState ? 'red' : 'white'}
               onClick={() => {
-                <FiHeart style={{ fill: 'red' }} />;
+                setLikeState(state => !state);
               }}
             />
           </Button>
         </Box>
         <Button
-          onClick={() =>dispatch(addItemToCart(product))}
-          p={2}
+          // onClick={() => dispatch(addItemToCart(product))}
+          py={2}
           //   color="white"
           //   bgColor="purple"
           bgColor="blue.200"
           // colorScheme="blue"
-          fontWeight="bold"
+          fontWeight="black"
           //   variant="solid"
           size={['md', 'lg']}
           width={['70%', '95%']}

@@ -12,6 +12,7 @@ export const products = [
     status: 'SALE',
     name: 'Runner Bolt',
     imgSrc: image,
+    // RELATED PRODUCTS
   },
   {
     desc: 'this is a sparkling descriptio of trhsi item telling you hoe much of a badass this product is',
@@ -219,7 +220,7 @@ export const products = [
     price: 200,
     percentOff: 20,
     status: 'SALE',
-    name: 'hello wolrd',
+    name: 'Balenciagas tailored hoodie ',
     imgSrc: image,
   },
   {
@@ -231,6 +232,7 @@ export const products = [
     percentOff: 20,
     status: 'SALE',
     name: 'hello wolrd',
+  
     imgSrc: image,
   },
   {
@@ -266,11 +268,25 @@ export const products = [
     name: 'new product',
     imgSrc: image,
   },
+  
+];
+export const LikedItems = [
   {
     desc: 'this is a spasrkling descriptio of trhsi item telling you hoe much of a badass this product is',
     sizes: ['XS', 'S', 'M', 'L'],
     rating: 4,
-    colors: ['blue', 'yellow', 'green', 'red'],
+    colors: ['orange', 'yellow', 'green', 'blue'],
+    price: 200,
+    percentOff: 20,
+    status: '50% OFF',
+    name: 'Luis Vuiton custom dress',
+    imgSrc: image2,
+  },
+  {
+    desc: 'this is a spasrkling descriptio of trhsi item telling you hoe much of a badass this product is',
+    sizes: ['XS', 'S', 'M', 'L'],
+    rating: 4,
+    colors: ['orange', 'yellow', 'green', 'blue'],
     price: 200,
     percentOff: 20,
     status: '50% OFF',

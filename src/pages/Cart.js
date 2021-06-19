@@ -1,10 +1,10 @@
 import { Button } from '@chakra-ui/button';
-import { Box, Flex, HStack, Link, Text } from '@chakra-ui/layout';
+import { Box, Flex, HStack, Text } from '@chakra-ui/layout';
 import React from 'react';
 import CheckoutProduct from '../components/CheckoutProduct';
 import Container from '../components/Container';
-import Header from '../components/Header';
-import SubTotal from '../components/SubTotal';
+import { useHistory } from 'react-router-dom';
+
 // import '../components/App.css';
 
 // import Subtotal from '../components/Subtotal';
@@ -15,16 +15,18 @@ import SubTotal from '../components/SubTotal';
 // import Footer from '../components/Footer';
 
 function Cart() {
-//   const [{ basket }] = useStateValue();
-      const basket = ["ehllo",2,3,5,65,7,];
+  const history = useHistory();
+
+  //   const [{ basket }] = useStateValue();
+  const basket = ['ehllo', 2, 3, 5, 65, 7];
 
   return (
     <Container>
-      <Box>
+      <Box bgColor="green">
         {basket?.length === 0 ? (
-          <Flex 
-          width={["60%","40%"]}
-          direction="column"
+          <Flex
+            width={['60%', '40%']}
+            direction="column"
             py={5}
             h="60vh"
             flexGrow={1}
@@ -36,39 +38,47 @@ function Cart() {
             <Text fontWeight="bold" fontSize="4xl" textAlign="center">
               Your Cart is empty
             </Text>
-            <Button size="lg" variant="solid" color="white" colorScheme="purple" bgColor="purple">Continue Shopping</Button>
+            <Button
+              size="lg"
+              variant="solid"
+              color="white"
+              colorScheme="purple"
+              bgColor="purple"
+            >
+              Continue Shopping
+            </Button>
           </Flex>
         ) : (
           <Box bg="white">
             <Box w={[]} px={['3px', '3px', '4%', '8%']} my={5}>
               <HStack
-                width="100%"
+                width="90vw"
+                px={3}
+                margin="auto"
+                alignItems="center"
                 h={['60px', '40px']}
                 spacing={0}
                 fontWeight="extrabold"
-                fontSize={['15px', '20px']}
+                fontSize={['12px', '20px']}
+                bgColor="purple.200"
+                fontStyle="italic"
+                justifyContent="space-between"
               >
-                <Flex w={['50%']} h="100%" py={2} px={1}>
+                <Flex w={['30%', '50%']} py={2} px={1}>
                   ITEM
                 </Flex>
-                <Flex alignItems="center" w={['20%', '10%']} h="100%">
+                <Flex alignItems="center" w={['20%', '10%']}>
                   QTY
                 </Flex>
 
                 <Flex
                   width={['15%', '20%']}
-                  h="100%"
                   alignItems="center"
                   justifyContent="center"
                 >
-                  UNIT PRICE
+                  PRICE
                 </Flex>
-                <Flex
-                  width={['15%', '20%']}
-                  h="100%"
-                  alignItems="center"
-                  justifyContent="center"
-                >
+                <Flex width={'20%'} alignItems="center" justifyContent="center">
                   SUBTOTAL
                 </Flex>
               </HStack>
@@ -78,7 +88,7 @@ function Cart() {
               <Box>
                 {basket.map(item => (
                   <CheckoutProduct
-                  key={item.id}
+                    key={item.id}
                     id={item.id}
                     name={item.name}
                     description={item.description}
@@ -94,7 +104,33 @@ function Cart() {
         )}
 
         {basket?.length > 0 && (
-         <SubTotal/>
+          <Box
+            w={['95%', '85%']}
+            display="flex"
+            flexDir="column"
+            alignItems="flex-end"
+            bgColor="red"
+            margin="auto"
+            textAlign="center"
+          >
+            <Flex alignItems="center">
+              <Text fontWeight="bold" fontSize="2xl">
+                Total:
+              </Text>
+              <Text fontWeight="bold" fontSize="3xl">
+                $19.40
+              </Text>
+            </Flex>
+
+            <Box>
+              <Button m={5} size="lg" type="button">
+                Proceed
+              </Button>
+              <Button m={5} size="lg" onClick={() => history.push('../')}>
+                Continue Shoping
+              </Button>
+            </Box>
+          </Box>
         )}
       </Box>
     </Container>

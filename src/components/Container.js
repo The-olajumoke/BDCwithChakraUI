@@ -1,14 +1,15 @@
+import { Box, Flex } from '@chakra-ui/layout'
 import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
 
 function Container({children}) {
     return (
-        <div>
+        <Flex  direction="column"  >
             <Header/>
             {children}
             <Footer/>
-        </div>
+        </Flex >
     )
 }
 

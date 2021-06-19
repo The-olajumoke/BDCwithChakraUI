@@ -21,9 +21,7 @@ function ItemLayout() {
     >
       {products.map((product, index) => (
         <Item product={product} id={index} key={index} />
-
       ))}
-      
     </Flex>
   );
 }

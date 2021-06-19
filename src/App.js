@@ -14,11 +14,14 @@ import Cart from './pages/Cart';
 import { products } from './utils/dummy';
 import About from './pages/About';
 import AddItem from './pages/AddItem';
-import { FiHeart, FiHome } from 'react-icons/fi';
 import MobileFooter from './components/MobileFooter';
+import Favourites from './pages/Favourites';
+import Login from './pages/Login';
+import AboutUs from './pages/AboutUs';
+import Categories from './pages/Categories';
+import AllItems from './pages/AllItems';
 
 function App() {
-  const history = useHistory();
 
   const chunk = (arr, chunkSize) => {
     const newArr = [];
@@ -34,17 +37,33 @@ function App() {
       <Router>
         <div className="app">
           <Switch>
-            <Route exact path="/">
+            <Route path="/" exact>
               <Home/>
             </Route>
             <Route path="/about/:id">
               <About />
             </Route>
-            <Route exact path="/cart">
+            <Route  path="/cart">
               <Cart />
             </Route>
+            
             <Route path="/add-item">
               <AddItem />
+            </Route>
+            <Route path="/favourites">
+              <Favourites/>              
+            </Route>
+            <Route path="/log-in">
+            <Login/>
+            </Route>
+            <Route path="/about-us">
+            <AboutUs/>
+            </Route>
+            <Route path="/categories">
+            <Categories/>
+            </Route>
+            <Route path="/all-items">
+            <AllItems/>
             </Route>
           </Switch>
 <MobileFooter/>
