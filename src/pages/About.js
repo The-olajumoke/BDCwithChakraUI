@@ -9,8 +9,7 @@ import {
   useNumberInput,
   HStack,
   Input,
-  List,
-  ListItem,
+
   LinkBox,
   Link,
   VStack,

@@ -1,20 +1,15 @@
 import { Avatar } from '@chakra-ui/avatar';
 import { IconButton } from '@chakra-ui/button';
-import { Box, Divider, Flex, Heading, Text } from '@chakra-ui/layout';
+import { Box, Divider, Flex } from '@chakra-ui/layout';
 import React, { useState } from 'react';
-import { FaBabyCarriage, FaBicycle, FaBook, FaChild, FaShoePrints } from 'react-icons/fa';
-import { FiDelete, FiHome, FiMenu } from 'react-icons/fi';
 import {
-  Gi3DHammer,
-  GiCancel,
-  GiDress,
-  GiFootsteps,
-  GiHamburgerMenu,
-  GiShirt,
-  GiToyMallet,
-  GiTroll,
-  GiTrousers,
-} from 'react-icons/gi';
+  FaBabyCarriage,
+  FaBicycle,
+  FaBook,
+  FaShoePrints,
+} from 'react-icons/fa';
+import { FiHome, FiMenu } from 'react-icons/fi';
+import { GiDress, GiShirt } from 'react-icons/gi';
 import image3 from '../newImg/girl-2696947_1920.jpg';
 import NavItem from './NavItem';
 
@@ -23,7 +18,7 @@ function SideBar({}) {
 
   return (
     <Box
-      display={['none', 'flex']}
+      display={['none','flex']}
       position="fixed"
       // position={["none", "fixed"]}
       left="0"
@@ -42,7 +37,7 @@ function SideBar({}) {
       <Flex
         p="5%"
         flexDir="column"
-        alignItems={navSize == 'small' ? 'center' : 'flex-start'}
+        alignItems={navSize === 'small' ? 'center' : 'flex-start'}
         as="nav"
       >
         <IconButton
@@ -51,7 +46,7 @@ function SideBar({}) {
           _hover={{ background: 'none' }}
           icon={<FiMenu />}
           onClick={() => {
-            if (navSize == 'small') {
+            if (navSize === 'small') {
               changeNavSize('large');
             } else {
               changeNavSize('small');

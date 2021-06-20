@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/button';
-import { FaShoppingCart, FaStar } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
 import { Checkbox, CheckboxGroup } from '@chakra-ui/checkbox';
 import { FormControl, FormLabel } from '@chakra-ui/form-control';
 import { Input } from '@chakra-ui/input';
@@ -11,7 +11,7 @@ import {
   NumberInputField,
   NumberInputStepper,
 } from '@chakra-ui/number-input';
-import { Select, SelectField } from '@chakra-ui/select';
+import { SelectField } from '@chakra-ui/select';
 import { Textarea } from '@chakra-ui/textarea';
 
 import React from 'react';

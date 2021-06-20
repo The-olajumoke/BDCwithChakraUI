@@ -11,12 +11,10 @@ import {
   Avatar,
 } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
-import React, { useState } from 'react';
+import React from 'react';
 import { FiSearch, FiHeart, FiShoppingCart } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import SideBar from './SideBar';
-import { FaBaby } from 'react-icons/fa';
 function Header() {
   // const [sideBar, setSideBar]=useState(false)
   const history = useHistory();

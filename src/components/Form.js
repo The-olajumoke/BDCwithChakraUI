@@ -3,7 +3,7 @@ import { FormControl, FormLabel } from '@chakra-ui/form-control';
 import { Input, InputGroup, InputRightElement,  } from '@chakra-ui/input';
 import { Box, Flex, Text } from '@chakra-ui/layout';
 import React, { useState } from 'react';
-import { FaBaby, FaBabyCarriage, FaEye } from 'react-icons/fa';
+import { FaEye } from 'react-icons/fa';
 import { FiEyeOff, FiLogIn } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 

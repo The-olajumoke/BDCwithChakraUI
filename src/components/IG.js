@@ -1,5 +1,5 @@
 import { Img } from '@chakra-ui/image';
-import { Box, Flex, Link } from '@chakra-ui/layout';
+import { Box, Flex} from '@chakra-ui/layout';
 import React from 'react';
 import image from '../newImg/wristwatch-407096_1920.jpg';
 import image2 from '../newImg/fire-and-water-2354583_1920.jpg';

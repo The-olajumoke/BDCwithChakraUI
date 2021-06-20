@@ -1,4 +1,4 @@
-import { Box, List, ListItem } from '@chakra-ui/layout';
+import { Box } from '@chakra-ui/layout';
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -8,7 +8,6 @@ import image2 from '../newImg/fire-and-water-2354583_1920.jpg';
 import image3 from '../newImg/girl-2696947_1920.jpg';
 import image4 from '../newImg/ice-cubes-1914351_1920.jpg';
 import image5 from '../newImg/gadgets-336635_1920.jpg';
-import { FaFacebook } from 'react-icons/fa';
 import { Text } from '@chakra-ui/layout';
 import { Button } from '@chakra-ui/button';
 function ImageSlider() {

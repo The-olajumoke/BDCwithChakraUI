@@ -5,7 +5,7 @@ import {
   theme,
 } from '@chakra-ui/react';
 
-import { BrowserRouter as Router, Switch, Route,useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 import './App.css';
@@ -23,15 +23,6 @@ import AllItems from './pages/AllItems';
 
 function App() {
 
-  const chunk = (arr, chunkSize) => {
-    const newArr = [];
-    for (let i = 0; i < arr.length; i += chunkSize) {
-      const smallChunk = arr.slice(i, i + chunkSize);
-      newArr.push(smallChunk);
-    }
-    return newArr;
-  };
-  const images = chunk(products, 5);
   return (
     <ChakraProvider theme={theme}>
       <Router>

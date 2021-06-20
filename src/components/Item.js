@@ -3,10 +3,9 @@ import { FaShoppingCart, FaStar } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
 import { Button } from '@chakra-ui/button';
 import { useHistory } from 'react-router-dom';
-import { addItemToCart } from '../redux/Cart/cartSlice';
 import { Img } from '@chakra-ui/image';
 import { Box, Flex, HStack, Text } from '@chakra-ui/layout';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 function Item({ product, id }) {
   // const currentProduct = product.toString("");
   // console.log(currentProduct);
@@ -14,7 +13,7 @@ function Item({ product, id }) {
   // const currentProduct=[product, id]
   // console.log(currentProduct);
   const history = useHistory();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [likeState, setLikeState] = useState(false);
 
   return (

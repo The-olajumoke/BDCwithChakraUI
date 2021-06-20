@@ -22,7 +22,7 @@ function Cart() {
 
   return (
     <Container>
-      <Box bgColor="green">
+      <Box>
         {basket?.length === 0 ? (
           <Flex
             width={['60%', '40%']}
@@ -60,7 +60,7 @@ function Cart() {
                 spacing={0}
                 fontWeight="extrabold"
                 fontSize={['12px', '20px']}
-                bgColor="purple.200"
+                bgColor={['purple.200', 'white']}
                 fontStyle="italic"
                 justifyContent="space-between"
               >
@@ -109,7 +109,6 @@ function Cart() {
             display="flex"
             flexDir="column"
             alignItems="flex-end"
-            bgColor="red"
             margin="auto"
             textAlign="center"
           >
@@ -123,10 +122,22 @@ function Cart() {
             </Flex>
 
             <Box>
-              <Button m={5} size="lg" type="button">
+              <Button
+                m={5}
+                size="lg"
+                type="button"
+                variant="outline"
+                colorScheme="purple"
+              >
                 Proceed
               </Button>
-              <Button m={5} size="lg" onClick={() => history.push('../')}>
+              <Button
+                m={5}
+                size="lg"
+                variant="outline"
+                colorScheme="purple"
+                onClick={() => history.push('../')}
+              >
                 Continue Shoping
               </Button>
             </Box>

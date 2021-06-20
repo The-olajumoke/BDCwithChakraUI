@@ -5,8 +5,7 @@ import IG from '../components/IG'
 
 import ItemLayout from '../components/ItemLayout'
 import ImageSlider from '../components/ImageSlider'
-import { Box, Flex, Text } from '@chakra-ui/layout'
-import SideBar from '../components/SideBar'
+import { Flex } from '@chakra-ui/layout'
 
 function Home() {
   

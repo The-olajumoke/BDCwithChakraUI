@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/button';
 import { Img } from '@chakra-ui/image';
-import { Box, Flex, HStack, Text, VStack } from '@chakra-ui/layout';
+import { Box, Flex, Text, VStack } from '@chakra-ui/layout';
 import { useHistory } from 'react-router-dom';
 import {
   NumberDecrementStepper,
@@ -10,33 +10,27 @@ import {
   NumberInputStepper,
 } from '@chakra-ui/number-input';
 import React, { useState } from 'react';
-// import './Cart.css';
-// import Love from '@material-ui/icons/FavoriteBorder';
-// import Bin from '@material-ui/icons/Delete';
-// import { useStateValue } from './StateProvider';
 import image from '../newImg/blanket-2593141_1920.jpg';
-import { FaHeart } from 'react-icons/fa';
-import Icon from '@chakra-ui/icon';
-import { GiCancel, GiHeartNecklace } from 'react-icons/gi';
+import { GiCancel } from 'react-icons/gi';
 import { FiHeart } from 'react-icons/fi';
 function CheckoutProduct({ id, name, description, price, quantity }) {
   const [likeState, setLikeState] = useState(false);
   const history = useHistory();
 
   //   const [{ basket }, dispatch] = useStateValue();
-  const removeFromBasket = () => {
+  // const removeFromBasket = () => {
     // dispatch({
     //   type: 'REMOVE_FROM_BASKET',
     //   id: id,
     // });
-  };
+  // };
 
-  const handleChange = e => {
+  // const handleChange = e => {
     // dispatch({
     //   type: 'SET_QUANTITY',
     //   payload: { id: id, quantity: +e.target.value },
     // });
-  };
+  // };
   return (
     <Box w={[]} px={['3px', '3px', '4%', '8%']} my={5}>
       <Flex
@@ -109,7 +103,8 @@ function CheckoutProduct({ id, name, description, price, quantity }) {
         <Flex
           direction={['row', ' ']}
           w={['100%', '40%']}
-fontWeight="black"          justifyContent="space-around"
+          fontWeight="black"
+          justifyContent="space-around"
           alignItems="center"
           bgColor={['purple.400', 'white']}
           borderBottomRightRadius="xl"
