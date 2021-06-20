@@ -84,8 +84,7 @@ function Cart() {
               </HStack>
             </Box>
 
-            <Box className="cart_items">
-              <Box>
+            <Box h="100%" >
                 {basket.map(item => (
                   <CheckoutProduct
                     key={item.id}
@@ -98,7 +97,6 @@ function Cart() {
                     Subtotal={item.Subtotal}
                   />
                 ))}
-              </Box>
             </Box>
           </Box>
         )}

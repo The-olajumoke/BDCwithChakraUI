@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/button';
 import { Img } from '@chakra-ui/image';
-import { Box, Flex, Text, VStack } from '@chakra-ui/layout';
+import { Box, Divider, Flex, Text, VStack } from '@chakra-ui/layout';
 import { useHistory } from 'react-router-dom';
 import {
   NumberDecrementStepper,
@@ -32,12 +32,12 @@ function CheckoutProduct({ id, name, description, price, quantity }) {
     // });
   // };
   return (
-    <Box w={[]} px={['3px', '3px', '4%', '8%']} my={5}>
+    <>
+    <Box h="100%" px={['3px', '3px', '4%', '8%']} my={5} mb={["10","5"]}>
       <Flex
         width={['98%', '100%']}
         h={['200px', '160px']}
         borderRadius="xl"
-        border="2px"
         spacing={0}
         position="relative"
         direction={['column', 'row']}
@@ -76,14 +76,13 @@ function CheckoutProduct({ id, name, description, price, quantity }) {
               fontWeight="bold"
               flexWrap="wrap"
               fontStyle="italic"
-              fontFamily="cursive"
               fontSize={['17px', '25px']}
               flexGrow={1}
             >
               The best Cutton Towel ever
             </Text>
             <VStack w="100%" flexGrow={1}>
-              <Text fontSize={['15px']} fontFamily="cursive" fontStyle="italic">
+              <Text fontSize={['15px']}  fontStyle="italic">
                 Color: <b>RED</b>
               </Text>
               <Button>
@@ -154,6 +153,8 @@ function CheckoutProduct({ id, name, description, price, quantity }) {
         </Flex>
       </Flex>
     </Box>
+    <Divider/>
+    </>
   );
 }
 
