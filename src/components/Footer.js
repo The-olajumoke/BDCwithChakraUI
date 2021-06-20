@@ -35,7 +35,6 @@ function Footer() {
         <VStack w={['100%', '48%']} spacing={3}>
           <Text
             fontSize={['md', 'xl']}
-            fontFamily="cursive"
             fontWeight={['black', 'semibold']}
           >
             STAY IN TOUCH
@@ -57,7 +56,6 @@ function Footer() {
         <VStack w={['100%', '48%']} spacing={3}>
           <Text
             fontSize={['md', 'xl']}
-            fontFamily="cursive"
             fontWeight={['black', 'semibold']}
           >
             NEVER MISS AN EMAIL

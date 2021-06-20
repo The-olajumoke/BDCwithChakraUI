@@ -136,13 +136,13 @@ body {
   width: 50px !important;
   height: 50px !important;
   color: white;
-  background-color: red;
+  
 }
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
-  color: red;
+ 
   outline: none;
   background-color: purple;
 }

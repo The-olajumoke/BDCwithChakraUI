@@ -23,7 +23,6 @@ function IG() {
         fontSize={['xl', '3xl']}
         pb={5}
         fontWeight="bold"
-        fontFamily="cursive"
       >
         FOLLOW US ON INSTAGRAM
       </Box>

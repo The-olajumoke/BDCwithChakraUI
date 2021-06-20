@@ -8,7 +8,7 @@ function Favourites() {
     return (
       <Box w="95vw" >
       <Container>
-        <Heading textAlign="center" fontSize="2xl" m={5}>
+        <Heading textAlign="center" fontSize="2xl" mt={10}>
           Liked Items
         </Heading>
         <Flex direction={["column","row"]} justifyContent="center" alignItems="center">

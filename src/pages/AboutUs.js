@@ -16,7 +16,7 @@ function AboutUs() {
           p={["3","10"]}
         >
           <Box>
-            <Heading>About Us</Heading>
+            <Heading mt={10}>About Us</Heading>
             BaviesDotCom is your number one maternity, newborn, baby, toddler
             and kiddies online and offline store in Nigeria. Getting quality
             mother care and kiddies products from the Uk, US and Turkey here in
