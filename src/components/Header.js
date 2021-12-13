@@ -19,18 +19,10 @@ function Header() {
   // const [sideBar, setSideBar]=useState(false)
   const history = useHistory();
   return (
-    <Box w="99vw" margin="auto">
-      <Box w="95%" margin="auto">
-        <SideBar />
+    <Box w='100%' bgColor='purple' position='sticky'  margin="auto" h='75px' top={0} zIndex={2}>
+        {/* <SideBar /> */}
         <VStack
-          // borderBottom="2px"
-          bgColor="white"
-          position="sticky"
-          top="0"
-          left="0"
-          right={0}
-          zIndex="300"
-          h="150px"
+          // h="150px"
           w="100%"
         >
           <Flex
@@ -42,15 +34,12 @@ function Header() {
             alignItems="center"
           >
             <Flex w={['70%', '70', '40%', '30%']}>
-              {/* <GiHamburgerMenu
-            onClick={() => setSideBar(prev => !prev)}
-            size="40px"
-          /> */}
-              <Heading
+               <Heading
                 as="h1"
                 ml={5}
                 cursor="pointer"
                 onClick={() => history.push('../')}
+                color='white'
               >
                 BabiesDotCom
               </Heading>
@@ -71,7 +60,7 @@ function Header() {
                 p={0}
                 borderLeftRadius="none"
                 variant="solid"
-                bgColor="purple"
+                // bgColor="purple"
               >
                 <FiSearch />
                 {/* Search */}
@@ -120,7 +109,7 @@ function Header() {
               </Box>
             </HStack>
           </Flex>
-          <HStack
+          {/* <HStack
             // px="8%"
             bgColor={['white', 'blue.200']}
             w="100%"
@@ -188,10 +177,9 @@ function Header() {
             >
               Clothing
             </Link>
-          </HStack>
+          </HStack> */}
           {/* <SideBar state={sideBar} /> */}
         </VStack>
-      </Box>
     </Box>
   );
 }

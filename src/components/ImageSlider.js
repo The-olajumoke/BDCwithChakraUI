@@ -45,7 +45,8 @@ function ImageSlider() {
     <Box
       className="carousel"
       d="block"
-      w={["70vw","90vw"]}
+      // w={["70vw","90vw"]}
+      w="70vw"
       margin="auto"
       h={["300px","650px"]}
       // h={["auto","650px"]}

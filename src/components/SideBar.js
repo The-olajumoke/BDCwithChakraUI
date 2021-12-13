@@ -1,6 +1,6 @@
 import { Avatar } from '@chakra-ui/avatar';
 import { IconButton } from '@chakra-ui/button';
-import { Box, Divider, Flex } from '@chakra-ui/layout';
+import { Box, Divider, Flex,VStack } from '@chakra-ui/layout';
 import React, { useState } from 'react';
 import {
   FaBabyCarriage,
@@ -18,19 +18,18 @@ function SideBar({}) {
 
   return (
     <Box
-      display={['none','flex']}
-      position="fixed"
+      display={['none', 'flex']}
+      position="sticky"
       // position={["none", "fixed"]}
       left="0"
       top="0"
+      bottom="0"
       zIndex={500}
       h={['100vh', '100vh']}
-      // border="2px"
-      bgColor="white"
       // marginTop={['1.5vh', '2.5vh']}
       boxShadow="0 4px 12px 0 rgba(0,0,0,0.5)"
-      borderRadius={navSize == 'small' ? '15px' : '30px'}
-      w={navSize == 'small' ? '75px' : '200px'}
+      // borderRadius={navSize == 'small' ? '15px' : '30px'}
+      w={navSize == 'small' ? '75px' : '250px'}
       justifyContent="space-between"
       flexDir="column"
     >
@@ -39,12 +38,15 @@ function SideBar({}) {
         flexDir="column"
         alignItems={navSize === 'small' ? 'center' : 'flex-start'}
         as="nav"
+        justifyContent='space-between'
+        flex={1}
       >
         <IconButton
           background="none"
-          mt={5}
+          mt={3}
           _hover={{ background: 'none' }}
           icon={<FiMenu />}
+          fontSize="4xl"
           onClick={() => {
             if (navSize === 'small') {
               changeNavSize('large');
@@ -53,24 +55,16 @@ function SideBar({}) {
             }
           }}
         />
-        <NavItem navSize={navSize} icon={FiHome} title="Dashboard" />
+        <VStack h='75%' display={['flex']} flexDirection='column' justifyContent='space-between'  >
+          <NavItem navSize={navSize} icon={FiHome} title="Dashboard" />
 
-        <NavItem navSize={navSize} icon={FaBabyCarriage} title="Babies" />
-        <NavItem navSize={navSize} icon={FaBicycle} title="Toys" />
-        <NavItem navSize={navSize} icon={GiShirt} title="Boys" />
-        <NavItem navSize={navSize} icon={FaShoePrints} title="Shoes" />
-        <NavItem navSize={navSize} icon={GiDress} title="Girls" />
-        <NavItem navSize={navSize} icon={FaBook} title="Back to School" />
-      </Flex>
-
-      <Flex
-        p="5%"
-        flexDir="column"
-        w="100%"
-        alignItems={navSize == 'small' ? 'center' : 'flex-start'}
-        mb={4}
-      >
-        <Divider display={navSize == 'small' ? 'none' : '200px'} />
+          <NavItem navSize={navSize} icon={FaBabyCarriage} title="Babies" />
+          <NavItem navSize={navSize} icon={FaBicycle} title="Toys" />
+          <NavItem navSize={navSize} icon={GiShirt} title="Boys" />
+          <NavItem navSize={navSize} icon={FaShoePrints} title="Shoes" />
+          <NavItem navSize={navSize} icon={GiDress} title="Girls" />
+          <NavItem navSize={navSize} icon={FaBook} title="Back to School" />
+        </VStack>
         <Flex mt={4} alignItems="center">
           <Avatar size="sm" src={image3} />
           {/* <Flex
@@ -83,6 +77,7 @@ function SideBar({}) {
           </Flex> */}
         </Flex>
       </Flex>
+
     </Box>
   );
 }

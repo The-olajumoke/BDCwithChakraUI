@@ -17,7 +17,7 @@ function Home() {
               p={2}>
               <ItemLayout />
             </Flex>
-            <IG />
+            {/* <IG /> */}
         </Container>
     );
 }
