@@ -15,6 +15,7 @@ function ItemLayout() {
       px={['1%', '2%']}
       py={5}
       pb={6}
+      border="2px"
       justifyContent="center"
       alignItems="center"
       backgroundColor="gray.100"

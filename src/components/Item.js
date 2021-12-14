@@ -116,8 +116,7 @@ function Item({ product, id }) {
           // onClick={() => dispatch(addItemToCart(product))}
           py={2}
           //   color="white"
-          //   bgColor="purple"
-          bgColor="blue.200"
+            bgColor="purple"
           // colorScheme="blue"
           fontWeight="black"
           //   variant="solid"
