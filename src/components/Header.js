@@ -28,7 +28,7 @@ function Header() {
       top={0}
       zIndex={2}
       // boxShadow="0 0 12px 0  rgba(0,0,0,0.3)"
-      boxShadow='sm'
+      boxShadow="sm"
     >
       {/* <SideBar /> */}
       <VStack
@@ -49,10 +49,10 @@ function Header() {
               ml={5}
               cursor="pointer"
               // fontFamily='Karla'
-              color='purple'
+              color="purple"
               // fontFamily='Poppins'
-              fontFamily='Sofia'
-              fontWeight='semibold'             
+              fontFamily="Sofia"
+              fontWeight="semibold"
               onClick={() => history.push('../')}
             >
               BabiesDotCom
@@ -69,15 +69,14 @@ function Header() {
               borderColor="purple"
               borderRightRadius="none"
               placeholder="Enter Search Item"
-              
             />
             <Button
               p={0}
               borderLeftRadius="none"
               variant="solid"
               bgColor="purple"
-              color='white'
-              outlineColor='none'
+              color="white"
+              outlineColor="none"
               outline={0}
             >
               <FiSearch />
@@ -85,10 +84,11 @@ function Header() {
             </Button>
           </HStack>
           <HStack
-            w="20%"
+            w={['40%', '20%']}
             justifyContent="flex-end"
             alignItems="center"
-            spacing={1}
+            spacing={4}
+            // border="2px"
           >
             <Box position="relative">
               <FiHeart

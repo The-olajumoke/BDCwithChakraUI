@@ -11,11 +11,17 @@ import Accessories from '../Exports/necklace face2.JPG';
 
 function Categories() {
   return (
-    <Box border="2px" my={4} px={['17px', '20px']} fontFamily="Poppins">
-      <Heading as="h3" fontSize="4xl" fontWeight='thin' mb={10}>
+    <Box my={10} fontFamily="Poppins">
+      <Heading
+        as="h3"
+        px={['17px', '48px']}
+        fontSize="4xl"
+        fontWeight="normal"
+        mb={10}
+      >
         Categories
       </Heading>
-      <Box className="tryGrid" bgColor="gray.100" color="purple">
+      <Box className="tryGrid" bgColor="gray.100" py={5} color="purple">
         <Flex className="cat-box">
           <h3 className="cat-name">Infants</h3>
           <Img src={Infants} className="cat-image" borderRadius="lg" />

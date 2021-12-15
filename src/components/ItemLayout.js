@@ -2,8 +2,7 @@ import React from 'react';
 
 import { products } from '../utils/dummy';
 import Item from './Item';
-import { Flex} from '@chakra-ui/layout';
-
+import { Flex, Heading } from '@chakra-ui/layout';
 
 function ItemLayout() {
   return (
@@ -15,11 +14,11 @@ function ItemLayout() {
       px={['1%', '2%']}
       py={5}
       pb={6}
-      border="2px"
       justifyContent="center"
       alignItems="center"
       backgroundColor="gray.100"
     >
+
       {products.map((product, index) => (
         <Item product={product} id={index} key={index} />
       ))}

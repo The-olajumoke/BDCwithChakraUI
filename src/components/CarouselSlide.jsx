@@ -62,7 +62,7 @@ function CarouselSlide() {
             <Button
               color="white"
               size="lg"
-              width={['50%', '15%']}
+              width={['40%','40%','30%','15%']}
               bgColor="purple"
               variant="solid"
               fontSize="xl"

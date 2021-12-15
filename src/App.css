@@ -44,9 +44,16 @@
   .tryGrid {
     grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
-  padding: 0 10px;
+  padding: 0 35px;
 
 
   }
 
+}
+
+@media (max-width: 450px) {
+    .tryGrid{
+  padding: 0 10px;
+
+    }
 }

@@ -20,7 +20,8 @@ function Footer() {
     <Flex
       direction="column"
       justifyContent="center"
-      bgColor="blue.200"
+      bgColor="purple"
+      color='white'
       px={['2%', '8%']}
       py={3}
       mb={5}
@@ -49,7 +50,7 @@ function Footer() {
 
           <Flex>
             <FaMapMarker />
-            <Text fontSize="lg">N0. 19 Owolabi street, araromi area, ijeododo island,Ikotun Lagos</Text>
+            <Text ml={2} fontSize={['sm','lg']}>N0. 19 Owolabi street, araromi area, ijeododo island,Ikotun Lagos</Text>
           </Flex>
         </VStack>
 
@@ -66,15 +67,19 @@ function Footer() {
               variant="solid"
               placeholder="Enter Email..."
               size="md"
-              py={1}
+              borderColor='white'
+              // py={1}
             />
             <Button
-              variant="ghost"
+              variant="solid"
+              bgColor='purple'
               color="white"
-              bgColor="purple"
+              border='2px'
+              borderColor='white'
               borderRadius="none"
               rightIcon={<FiMail />}
-              size="lg"
+              size="md"
+              px={10}
               fontSize="md"
               fontFamily="serif"
               fontWeight="semibold"
@@ -85,7 +90,6 @@ function Footer() {
         </VStack>
       </Flex>
       <Flex
-        bgColor="purple"
         mt={5}
         width={['100%', '40%']}
         //   color="white"
