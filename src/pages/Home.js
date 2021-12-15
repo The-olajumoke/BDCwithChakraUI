@@ -6,21 +6,19 @@ import CarouselSlide from '../components/CarouselSlide'
 import ItemLayout from '../components/ItemLayout'
 import ImageSlider from '../components/ImageSlider'
 import { Flex } from '@chakra-ui/layout'
+import Categories from '../components/Categories'
 
 function Home() {
   
     return (
       
         <Container >
-            {/* <ImageSlider /> */}
             <CarouselSlide/>
          
-            <Flex justifyContent="center"
-              p={2}>
+           
                 {/* CATEGORIES*/}
-
-              <ItemLayout />
-            </Flex>
+<Categories/>
+              {/* <ItemLayout /> */}
             {/* <IG /> */}
         </Container>
     );

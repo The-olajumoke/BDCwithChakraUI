@@ -49,6 +49,7 @@ function Header() {
               ml={5}
               cursor="pointer"
               // fontFamily='Karla'
+              color='purple'
               // fontFamily='Poppins'
               fontFamily='Sofia'
               fontWeight='semibold'             
@@ -68,12 +69,16 @@ function Header() {
               borderColor="purple"
               borderRightRadius="none"
               placeholder="Enter Search Item"
+              
             />
             <Button
               p={0}
               borderLeftRadius="none"
               variant="solid"
               bgColor="purple"
+              color='white'
+              outlineColor='none'
+              outline={0}
             >
               <FiSearch />
               {/* Search */}
