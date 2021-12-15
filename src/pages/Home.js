@@ -18,8 +18,8 @@ function Home() {
            
                 {/* CATEGORIES*/}
 <Categories/>
-              {/* <ItemLayout /> */}
-            {/* <IG /> */}
+              <ItemLayout />
+            <IG />
         </Container>
     );
 }

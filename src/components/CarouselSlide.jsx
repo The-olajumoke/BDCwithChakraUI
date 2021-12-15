@@ -36,7 +36,7 @@ function CarouselSlide() {
             bgColor="blackAlpha.600"
             color="white"
           >
-            <Box border="2px" px={3}>
+            <Box px={3}>
               <Heading
                 as="h4"
                 mb={4}

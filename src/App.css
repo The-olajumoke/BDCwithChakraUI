@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
+  padding: 0 100px;
 }
 .cat-box {
   flex-direction: column;
@@ -31,6 +32,8 @@
   .tryGrid {
     grid-template-columns: repeat(3, 1fr);
   grid-gap:20px;
+  padding: 0 50px;
+
 
   }
   /* .cat-box {
@@ -41,6 +44,8 @@
   .tryGrid {
     grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
+  padding: 0 10px;
+
 
   }
 
